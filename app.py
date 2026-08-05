@@ -50,7 +50,7 @@ def goto_home():
     st.query_params["view"] = "home"
     if "id" in st.query_params:
         del st.query_params["id"]
-    st.rerun()
+    
 
 
 def goto_details(tmdb_id: int):
@@ -58,7 +58,7 @@ def goto_details(tmdb_id: int):
     st.session_state.selected_tmdb_id = int(tmdb_id)
     st.query_params["view"] = "details"
     st.query_params["id"] = str(int(tmdb_id))
-    st.rerun()
+
 
 
 # =============================
