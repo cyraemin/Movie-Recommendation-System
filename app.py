@@ -50,7 +50,7 @@ def goto_home():
     st.query_params["view"] = "home"
     if "id" in st.query_params:
         del st.query_params["id"]
-    st.rerun()
+    
 
 
 def goto_details(tmdb_id: int):
@@ -58,7 +58,7 @@ def goto_details(tmdb_id: int):
     st.session_state.selected_tmdb_id = int(tmdb_id)
     st.query_params["view"] = "details"
     st.query_params["id"] = str(int(tmdb_id))
-    st.rerun()
+
 
 
 # =============================
@@ -310,7 +310,7 @@ elif st.session_state.view == "details":
     with left:
         st.markdown("<div class='card'>", unsafe_allow_html=True)
         if data.get("poster_url"):
-            st.image(data["poster_url"], use_column_width=True)
+            st.image(data["poster_url"], use_container_width=True)
         else:
             st.write("🖼️ No poster")
         st.markdown("</div>", unsafe_allow_html=True)
@@ -333,7 +333,7 @@ elif st.session_state.view == "details":
 
     if data.get("backdrop_url"):
         st.markdown("#### Backdrop")
-        st.image(data["backdrop_url"], use_column_width=True)
+        st.image(data["backdrop_url"], use_container_width=True)
 
     st.divider()
     st.markdown("### ✅ Recommendations")
