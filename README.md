@@ -1,5 +1,8 @@
 # Movie Recommendation System
 
+deployed using streamlit:
+https://movie-recommendation-system-xh29h5cljaasduvt5d3sqh.streamlit.app/
+
 ## Overview
 
 A content-based Movie Recommendation System built using Python, Streamlit, and Natural Language Processing (NLP). The application recommends movies similar to a selected title by analyzing movie descriptions using TF-IDF vectorization and cosine similarity.
